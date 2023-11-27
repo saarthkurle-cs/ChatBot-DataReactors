@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" type = "text/css" href="style.css">
   <title>Login Page</title>
 </head>
 <body>
@@ -14,7 +15,6 @@
       <td><a href="./About.html">About</a></td>
       <td><a href="./FAQ.html">FAQ</a></td>
       <td><a href="./Checkout.html">Cart</a></td>
-      <td><a href="./System.html">System</a></td>
       <td><a href="./Account.html">Account</a></td>
       <td>
       <div class="search-container">
@@ -27,27 +27,44 @@
       </nav>
     </tr>   
   </table>
-    <b>Welcome to the Login Page!</b>
-  <br> <br/>
-  <div>
-    <form action="">
 
-      <label for="userName">Username</label>
-      <input type="text" name="userName"> <br />
+  <br/>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required> <br />
 
-      <label for="password">Password</label>
-      <input type="password" name="password"> <br />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required> <br />
 
-      <input type="submit" value="Sign In"> <br />
-
-      <input type="button" value="Forgot Password">
-      <input type="button" value="Creat a New Account">
-
+        <button type="button" onclick="validateLogin()" class="login-button">Login</button>
     </form>
+    <p id="loginMessage"></p>
+    <div id="forgotPasswordSection" style="display: none;">
+      <h2>Forgot Password</h2>
+      <form id="forgotPasswordForm">
+          <!-- Forgot password form fields here -->
+          <button type="button" onclick="sendPasswordResetEmail()">Reset Password</button>
+      </form>
+      <p id="forgotPasswordMessage"></p>
   </div>
-  <p></p>
-  <p></p>
-  <br> <br/>
+
+  <div id="createAccountSection" style="display: none;">
+      <h2>Create a New Account</h2>
+      <form id="createAccountForm">
+          <!-- Create account form fields here -->
+          <button type="button" onclick="submitRegistration()">Register</button>
+      </form>
+      <p id="createAccountMessage"></p>
+  </div>
+  
+  <div class="additional-links">
+      <a href="#" onclick="showSection('forgotPasswordSection')">Forgot Password?</a>
+      <span class="separator">|</span>
+      <a href="#" onclick="showSection('createAccountSection')">Create a New Account</a>
+  </div>
+  </div>
 </body>
 
 </html>
