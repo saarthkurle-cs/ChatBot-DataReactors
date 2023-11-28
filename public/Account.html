@@ -1,29 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type = "text/css" href="style.css">
+  <link rel="stylesheet" type = "text/css" href="account.css">
   <title>Account Preferences Page</title>
 </head>
 <body>
-  <table border="0" width="100%" cellpadding="15" cellspacing="0" align=center>
+  <table>
     <tr>
       <td><img src="logo.png" width="75"></td>
-      <td width="0">The Future is Electric!&nbsp;</td>
-        <nav>
+      <td><h3>The Future is Electric!</h2></td>
+      <nav>
       <td><a href="./index.html">Home</a></td>
       <td><a href="./Login.html">Login</a></td>
       <td><a href="./About.html">About</a></td>
       <td><a href="./FAQ.html">FAQ</a></td>
       <td><a href="./Checkout.html">Cart</a></td>
       <td><a href="./Account.html">Account</a></td>
-      <td>
-      <div class="search-container">
-        <form action="/action_page.php">
-          <input type="text" placeholder="Search.." name="search">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-      </div>
-      </td>
       </nav>
     </tr>   
   </table>
@@ -109,15 +101,10 @@
           </select><br />
 
           <label for="zipcode">ZipCode</label> <br />
-          <input type="text" name="zipcode" id=""> <br />
+          <input type="text" name="zipcode" id="zipcode"> <br />
 
       <button type="submit">Update Addresses</button>
     </form>
-
-    <!-- Display existing addresses with options to edit, delete, and set default -->
-    <div id="addressList">
-        <!-- Display existing addresses here -->
-    </div>
 </div>
 
 <div class="payment-section">
@@ -134,11 +121,6 @@
 
       <button type="submit">Update Payment Methods</button>
     </form>
-
-    <!-- Display existing payment methods with options to edit, delete, and set default -->
-    <div id="paymentList">
-        <!-- Display existing payment methods here -->
-    </div>
 </div>
 
 <script src="#.js"></script>

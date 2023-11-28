@@ -1,36 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type = "text/css" href="style.css">
+  <link rel="stylesheet" type = "text/css" href="login.css">
   <title>Login Page</title>
 </head>
 <body>
-  <table border="0" width="100%" cellpadding="15" cellspacing="0" align=center>
-    <tr>
-      <td><img src="logo.png" width="75"></td>
-      <td width="0">The Future is Electric!&nbsp;</td>
-        <nav>
-      <td><a href="./index.html">Home</a></td>
-      <td><a href="./Login.html">Login</a></td>
-      <td><a href="./About.html">About</a></td>
-      <td><a href="./FAQ.html">FAQ</a></td>
-      <td><a href="./Checkout.html">Cart</a></td>
-      <td><a href="./Account.html">Account</a></td>
-      <td>
-      <div class="search-container">
-        <form action="/action_page.php">
-          <input type="text" placeholder="Search.." name="search">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-      </div>
-      </td>
-      </nav>
-    </tr>   
-  </table>
 
-  <br/>
   <div class="login-container">
-    <h2>Login</h2>
+    <h2>Sign in</h2>
     <form id="loginForm">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required> <br />
@@ -40,31 +17,35 @@
 
         <button type="button" onclick="validateLogin()" class="login-button">Login</button>
     </form>
+    
     <p id="loginMessage"></p>
     <div id="forgotPasswordSection" style="display: none;">
       <h2>Forgot Password</h2>
       <form id="forgotPasswordForm">
-          <!-- Forgot password form fields here -->
-          <button type="button" onclick="sendPasswordResetEmail()">Reset Password</button>
+        <label for="forgotEmail">Email:</label>
+        <input type="email" id="forgotEmail" name="forgotEmail" required> <br />
+        <button type="button" onclick="sendPasswordResetEmail()">Reset Password</button>
       </form>
       <p id="forgotPasswordMessage"></p>
-  </div>
+    </div>
 
-  <div id="createAccountSection" style="display: none;">
+    <div id="createAccountSection" style="display: none;">
       <h2>Create a New Account</h2>
       <form id="createAccountForm">
-          <!-- Create account form fields here -->
-          <button type="button" onclick="submitRegistration()">Register</button>
+        <label for="newUsername">Username:</label>
+        <input type="text" id="newUsername" name="newUsername" required> <br />
+        <label for="newPassword">Password:</label>
+        <input type="password" id="newPassword" name="newPassword" required> <br />
+        <button type="button" onclick="submitRegistration()">Register</button>
       </form>
       <p id="createAccountMessage"></p>
-  </div>
-  
-  <div class="additional-links">
+    </div>
+
+    <div class="additional-links">
       <a href="#" onclick="showSection('forgotPasswordSection')">Forgot Password?</a>
       <span class="separator">|</span>
       <a href="#" onclick="showSection('createAccountSection')">Create a New Account</a>
-  </div>
+    </div>
   </div>
 </body>
-
 </html>
