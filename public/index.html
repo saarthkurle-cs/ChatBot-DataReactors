@@ -1,141 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Home Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=dvice-width, initial-scale=1.0">
+    <title>DataReactors - Home page</title>
+
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Lato&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
-  <a name="top"></a>
 
-<!-- Start Header -->
-  <table border="0" width="100%" cellpadding="15" cellspacing="0" align=center>
-    <tr>
-      <td><img src="logo.png" width="75"></td>
-      <td width="0">The Future is Electric!&nbsp;</td>
-        <nav>
-      <td><a href="./index.html">Home</a></td>
-      <td><a href="./Login.html">Login</a></td>
-      <td><a href="./About.html">About</a></td>
-      <td><a href="./FAQ.html">FAQ</a></td>
-      <td><a href="./Checkout.html">Cart</a></td>
-      <td><a href="./Account.html">Account</a></td>
-      <td>
-      <div class="search-container">
-        <form action="/action_page.php">
-          <input type="text" placeholder="Search.." name="search">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-      </div>
-      </td>
-      </nav>
-    </tr>   
-  </table>
-<!-- End Header -->
-  <p align="center">Welcome to the Home page!</p>
-  <b>The largest EV market...</b>
+    <!-- navbar -->
+    <nav class="navbar ">
+        <ul class="list-container">
+            <li class="list-item"><a href="./index.html" class="list active">Home</a></li>
+            <li class="list-item"><a href="./Login.html" class="list">Login</a></li>
+            <li class="list-item"><a href="./About.html" class="list">About</a></li>
+            <li class="list-item"><a href="./FAQ.html" class="list">FAQ</a></li>
+        </ul>
+        <div class="interaction">
+            <div class = "cart-user">
+                <a href="./Checkout.html" class="list"><img src="cart.png" class="icons" alt=""></a>
+                <a href="./Account.html" class="list"><img src="user.png" class="icons" alt=""></a>
+            </div>
 
-<!-- Start Consumer-->
-  <table border="0" width="100%" cellpadding="15" cellspacing="0">
-    <tr>
-      <!-- Start Subcategories-->
-      <td>
-        <ul>
-          <li><label for="body-style">Body Style:</label> 
-            <select name="types" id="types"> 
-              <option value="suv">SUV</option> 
-              <option value="hatchback">Hatchback</option> 
-              <option value="sedan">Sedan</option> 
-              <option value="pickup">Pickup</option> 
-            </select>
-          </li>
-          <br>
-          <li><label for="year">Year:</label> 
-            <select name="years" id="years"> 
-              <option value="2018">2018</option> 
-              <option value="2019">2019</option> 
-              <option value="2020">2020</option> 
-              <option value="2021">2021</option> 
-              <option value="2022">2022</option> 
-              <option value="2023">2023</option> 
-              <option value="2024">2024</option> 
-            </select>
-          </li>
-          <br>
-          <li><label for="prices">Price:</label> 
-            <select name="prices" id="prices"> 
-              <option value="low-to-high">Low to High</option> 
-              <option value="high-to-low">High to Low</option> 
-            </select>
-          </li>
-        </ul>  
-      </td>
-      <!-- End Subcategories-->
+        </div>
+    </nav>
 
-      <!-- Start Showcase-->
-      <td><img src="2019i3.jpg" width="300">
-        <h2>2019 BMW i3</h2>
-        <h4>Price: $20,350</h4>
-        <h5>Type: Hatchback</h5>
-        <p align="right">
-          <button style="background-color: rgb(146, 195, 238);">Add to cart</button>
-        </p>  
-       </td>
-      <td><img src="2022models.png" width="300">
-        <h2>2022 Tesla Model S</h2>
-        <h4>Price: $78,000</h4>
-        <h5>Type: Sedan</h5>
-        <p align="right">
-          <button style="background-color: rgb(146, 195, 238);">Add to cart</button>
-        </p> 
-      </td>
-      <td><img src="2023bolt.jpg" width="300">
-        <h2>2023 Chevy Bolt EV</h2>
-        <h4>Price: $32,375</h4>
-        <h5>Type: Hatchback</h5>
-        <p align="right">
-          <button style="background-color: rgb(146, 195, 238);">Add to cart</button>
-        </p> 
-      </td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><img src="2023kona.jpg" width="300">
-        <h2>2023 Hyundai Kona</h2>
-        <h4>Price: $41,500</h4>
-        <h5>Type: SUV</h5>
-        <p align="right">
-          <button style="background-color: rgb(146, 195, 238);">Add to cart</button>
-        </p> 
-      </td>
-      <td><img src="2024mach.jpg" width="300">
-        <h2>2023 Rivian R1T</h2>
-        <h4>Price: $43,545</h4>
-        <h5>Type: SUV</h5>
-        <p align="right">
-          <button style="background-color: rgb(146, 195, 238);">Add to cart</button>
-        </p> 
-      </td>
-      <td><img src="Rivian2023.jpg" width="300">
-        <h2>2023 Rivian R1T</h2>
-        <h4>Price: $85,000</h4>
-        <h5>Type: Pickup</h5>
-        <p align="right">
-          <button style="background-color: rgb(146, 195, 238);">Add to cart</button>
-        </p> 
-      </td>
-    </tr>
-  </table>
-<!-- End Consumer-->
 
-  <b>...I lied.</b>
-  <p align="center"><img src="ad.png" width="700"></p>
-  <a href="#top">back to top</a>
-  
-  <br> <br/>
-  <p></p>
-  <p></p>
-  <br> <br/>
-  
+    <!-- header -->
+    <header class="header-section">
+        <h1 class="header-text">Data Reactors</h1>
+    </header>
 
+    <!-- Car Selection -->
+    <section class="car-selection">
+        <h1 class="selection-title">Our Inventory</h1>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="2019i3.jpg" width="500" class="car-img" alt="">
+                <p class="car-name">2019 BMW i3</p>
+            </div>
+            <div class="product-card">
+                <img src="2022models.png" width="500" class="car-img" alt="">
+                <p class="car-name">2022 Tesla Model S</p>
+            </div>
+            <div class="product-card">
+                <img src="2023bolt.jpg" width="500" class="car-img" alt="">
+                <p class="car-name">2023 Chevy Bolt EV</p>
+            </div>
+        </div>
+    </section>
+    <section class="car-selection">
+        <div class="product-container">
+            <div class="product-card">
+                <img src="2024mach.jpg" width="500" class="car-img" alt="">
+                <p class="car-name">2024 Ford Mustang Mach-E</p>
+            </div>
+            <div class="product-card">
+                <img src="2023kona.jpg" width="500" class="car-img" alt="">
+                <p class="car-name">2023 Hyundai Kona</p>
+            </div>
+            <div class="product-card">
+                <img src="Rivian2023.jpg" width="500" class="car-img" alt="">
+                <p class="car-name">2023 Rivian R1T</p>
+            </div>   
+        </div>
+    </section>
+    <section>
+        <p align="center"><img src="ad.png"></p>
+    </section>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <script src="home.js"></script>
 </body>
+
+
+
 </html>
