@@ -3,8 +3,14 @@
 <head>
   <link rel="stylesheet" type = "text/css" href="login.css">
   <title>Login Page</title>
+
+  <link rel="stylesheet" href="navbar.css">
+
 </head>
 <body>
+
+  <!-- navbar -->
+  <div id="navbar-container"></div>
 
   <div class="login-container">
     <h2>Sign in</h2>
@@ -47,5 +53,9 @@
       <a href="#" onclick="showSection('createAccountSection')">Create a New Account</a>
     </div>
   </div>
+  <script src="loadNavBar.js"></script>
+  <script>
+    loadNavBar();
+  </script>
 </body>
 </html>

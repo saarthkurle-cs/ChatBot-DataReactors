@@ -3,30 +3,14 @@
 <head>
   <link rel="stylesheet" type = "text/css" href="style.css">
   <title>FAQ Page</title>
+
+  <link rel="stylesheet" href="navbar.css">
+
 </head>
 <body>
-  <table border="0" width="100%" cellpadding="15" cellspacing="0" align=center>
-    <tr>
-      <td><img src="logo.png" width="75"></td>
-      <td width="0">The Future is Electric!&nbsp;</td>
-        <nav>
-      <td><a href="./index.html">Home</a></td>
-      <td><a href="./Login.html">Login</a></td>
-      <td><a href="./About.html">About</a></td>
-      <td><a href="./FAQ.html">FAQ</a></td>
-      <td><a href="./Checkout.html">Cart</a></td>
-      <td><a href="./Account.html">Account</a></td>
-      <td>
-      <div class="search-container">
-        <form action="/action_page.php">
-          <input type="text" placeholder="Search.." name="search">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-      </div>
-      </td>
-      </nav>
-    </tr>   
-  </table>
+  <!-- navbar -->
+  <div id="navbar-container"></div>
+
   <h1>Welcome to the FAQ Page!</h1>
   <br> <br/>
   <p></p>
@@ -47,4 +31,8 @@
   <p></p>
  
 </body>
+<script src="loadNavBar.js"></script>
+<script>
+  loadNavBar();
+</script>
 </html>

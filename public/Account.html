@@ -3,22 +3,13 @@
 <head>
   <link rel="stylesheet" type = "text/css" href="account.css">
   <title>Account Preferences Page</title>
+
+  <link rel="stylesheet" href="navbar.css">
+
 </head>
 <body>
-  <table>
-    <tr>
-      <td><img src="logo.png" width="75"></td>
-      <td><h3>The Future is Electric!</h2></td>
-      <nav>
-      <td><a href="./index.html">Home</a></td>
-      <td><a href="./Login.html">Login</a></td>
-      <td><a href="./About.html">About</a></td>
-      <td><a href="./FAQ.html">FAQ</a></td>
-      <td><a href="./Checkout.html">Cart</a></td>
-      <td><a href="./Account.html">Account</a></td>
-      </nav>
-    </tr>   
-  </table>
+    <!-- navbar -->
+    <div id="navbar-container"></div>
   
   <div class="account-section">
     <h2>Account Information</h2>
@@ -124,6 +115,9 @@
 </div>
 
 <script src="#.js"></script>
-
+<script src="loadNavBar.js"></script>
+<script>
+  loadNavBar();
+</script>
 </body>
 </html>

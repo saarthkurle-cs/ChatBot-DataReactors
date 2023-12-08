@@ -3,36 +3,26 @@
 <head>
   <link rel="stylesheet" type = "text/css" href="style.css">
   <title>About Page</title>
+
+  <link rel="stylesheet" href="navbar.css">
+
 </head>
 <body>
-    <table border="0" width="100%" cellpadding="15" cellspacing="0" align=center>
-    <tr>
-      <td><img src="logo.png" width="75"></td>
-      <td width="0">The Future is Electric!&nbsp;</td>
-        <nav>
-      <td><a href="./index.html">Home</a></td>
-      <td><a href="./Login.html">Login</a></td>
-      <td><a href="./About.html">About</a></td>
-      <td><a href="./FAQ.html">FAQ</a></td>
-      <td><a href="./Checkout.html">Cart</a></td>
-      <td><a href="./Account.html">Account</a></td>
-      <td>
-      <div class="search-container">
-        <form action="/action_page.php">
-          <input type="text" placeholder="Search.." name="search">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-      </div>
-      </td>
-      </nav>
-    </tr>   
-  </table>
+    
+  <!-- navbar -->
+  <div id="navbar-container"></div>
+
   <h1>Welcome to the About Page!</h1>
   <br> <br/>
   <h2>The company DATA REACTORS was founded by four plucky university students and their desire to create a platform where they can provide goods to the world.</h2>
   <h2>The members are; Sean Ibarra Diaz, Joshua Gonzalez, Xiaoxuan Wang, and Saarth Kurle </h2>
   <br> <br/>
   <p></p>
+
+  <script src="loadNavBar.js"></script>
+  <script>
+    loadNavBar();
+  </script>
 
 </body>
 </html>
