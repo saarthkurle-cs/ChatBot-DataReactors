@@ -6,8 +6,9 @@
     left: 0;
     display: flex;
     justify-content: center;
-    z-index: 9;
+    z-index: 100;
     transition: 0.5s;
+    font-family: 'cinzel', serif;
 }
 
 .navbar.bg{

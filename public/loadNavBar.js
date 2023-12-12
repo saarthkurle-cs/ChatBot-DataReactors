@@ -32,8 +32,8 @@ function loadNavBar() {
     navbarStyles.href = 'navbar.css';
     document.head.appendChild(navbarStyles);
 
-    // Load the associated scripts for the navbar
-    const navbarScripts = document.createElement('script');
-    navbarScripts.src = 'navbar.js'; // Add the script file if you have one
-    document.head.appendChild(navbarScripts);
+    // // Load the associated scripts for the navbar
+    // const navbarScripts = document.createElement('script');
+    // navbarScripts.src = 'navbar.js'; // Add the script file if you have one
+    // document.head.appendChild(navbarScripts);
 }
