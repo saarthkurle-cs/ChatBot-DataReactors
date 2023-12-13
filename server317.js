@@ -54,9 +54,36 @@ app.post('/login', (req, res) => {
     });
 });
 
+// Set up a route for handling register requests
+app.post('/register', (req, res) => {
+    var newUsername = req.body.newUsername;
+    var newPassword = req.body.newPassword;
+
+    console.log('Received register request:', { newUsername, newPassword }); 
+
+    // Query to insert a new user into the users table
+    var sql = 'INSERT INTO users (username, password) VALUES (?, ?)';
+
+    db.query(sql, [newUsername, newPassword], (err, result) => {
+        if (err) {
+            // Check for duplicate entry error
+            if (err.code === 'ER_DUP_ENTRY') {
+                res.status(400).send('Username already exists');
+            } else {
+                throw err;
+            }
+        } else {
+            // Registration successful
+            res.send('Registration successful');
+        }
+    });
+});
+
+
 app.listen(port, () => {
     console.log(`Listening on http://localhost:${port}/`);
 });
 
 console.log(message);
+
 
