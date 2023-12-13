@@ -16,7 +16,7 @@
 
   <div class="login-container">
     <h2>Sign in</h2>
-    <form id="loginForm">
+    <form id="loginForm" method="POST" action="/login">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required> <br />
 
@@ -56,6 +56,7 @@
     </div>
   </div>
   <script src="loadNavBar.js"></script>
+  <script src="login.js"></script>
   <script>
     loadNavBar();
   </script>
