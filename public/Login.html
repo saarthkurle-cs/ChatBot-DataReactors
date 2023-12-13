@@ -16,7 +16,7 @@
 
   <div class="login-container">
     <h2>Sign in</h2>
-    <form id="loginForm">
+    <form id="loginForm" method="POST" action="/login">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required> <br />
 
@@ -39,13 +39,13 @@
 
     <div id="createAccountSection" style="display: none;">
       <h2>Create a New Account</h2>
-      <form id="createAccountForm">
+    <form id="createAccountForm" method="POST" action="/register">
         <label for="newUsername">Username:</label>
         <input type="text" id="newUsername" name="newUsername" required> <br />
         <label for="newPassword">Password:</label>
         <input type="password" id="newPassword" name="newPassword" required> <br />
         <button type="button" onclick="submitRegistration()">Register</button>
-      </form>
+    </form>
       <p id="createAccountMessage"></p>
     </div>
 
@@ -56,6 +56,7 @@
     </div>
   </div>
   <script src="loadNavBar.js"></script>
+  <script src="login.js"></script>
   <script>
     loadNavBar();
   </script>
