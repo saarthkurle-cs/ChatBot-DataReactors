@@ -2,7 +2,6 @@
 
 // Function to load the navigation bar dynamically
 function loadNavBar() {
-    // Create a container for the navigation bar
     const navbarContainer = document.getElementById('navbar-container');
 
     // Define the HTML content for the navigation bar
@@ -18,6 +17,7 @@ function loadNavBar() {
                 <div class="cart-user">
                     <a href="./Checkout.html" class="list"><img src="cart.png" class="icons" alt=""></a>
                     <a href="./Account.html" class="list"><img src="user.png" class="icons" alt=""></a>
+                    <span id="userGreeting"></span>
                 </div>
             </div>
         </nav>
@@ -31,6 +31,14 @@ function loadNavBar() {
     navbarStyles.rel = 'stylesheet';
     navbarStyles.href = 'navbar.css';
     document.head.appendChild(navbarStyles);
+
+    // Load the associated scripts for the navbar
+    const navbarScripts = document.createElement('script');
+    navbarScripts.src = 'navbar.js';
+    document.head.appendChild(navbarScripts);
+
+    // Update the navbar with the current user's information
+    updateNavbar();
 
     // // Load the associated scripts for the navbar
     // const navbarScripts = document.createElement('script');

@@ -1,3 +1,6 @@
+
+let currentUser = null;
+
 function validateLogin() {
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
@@ -14,6 +17,8 @@ function validateLogin() {
     .then(response => {
         if (response.ok) {
             // Redirect to index.html on successful login
+            currentUser = username;
+            updateNavbar();
             window.location.href = '/index.html';
         } else {
             // Display error message on invalid credentials
@@ -31,6 +36,15 @@ function validateLogin() {
 // Send a password reset email
 function sendPasswordResetEmail() {
     // Forgot password 
+}
+
+function updateNavbar() {
+    const userGreeting = document.getElementById('userGreeting');
+    if (currentUser) {
+        userGreeting.innerHTML = `Hello, ${currentUser}`;
+    } else {
+        userGreeting.innerHTML = ''; // Clear the greeting if no user is logged in
+    }
 }
 
 // Create a new account
@@ -79,4 +93,3 @@ function showSection(sectionId) {
     document.getElementById('forgotPasswordMessage').innerHTML = '';
     document.getElementById('createAccountMessage').innerHTML = '';
   }
-
