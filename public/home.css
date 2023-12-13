@@ -9,7 +9,7 @@ body{
     background-color: #3E424b;
 }
 
-/* .navbar{
+.navbar{
     width: 100%;
     height: 80px;
     position: fixed;
@@ -75,7 +75,7 @@ body{
     position: relative;
     margin: 10px;
     cursor: pointer;
-} */
+}
 
 .header-section{
     width: 100%;
